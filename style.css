@@ -1,0 +1,638 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+    z-index: 0;
+
+    --main-black: #121212;
+    --main-red: #670000;
+    --main-light-gray: rgb(154, 152, 152);
+    --main-yellow: rgb(255, 255, 90);
+}
+
+/* MENU */
+/* icon */
+
+.menu-btn {
+	width: 40px;
+	height: 30px;
+	position: fixed;
+	z-index: 99;
+	overflow: hidden;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+}
+
+.menu-btn span {
+	width: 40px;
+	height: 2px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #ffffff;
+	transition: all 0.5s;
+}
+
+.menu-btn span:nth-of-type(2) {
+	top: calc(50% - 5px);
+}
+
+.menu-btn span:nth-of-type(3) {
+	top: calc(50% + 5px);
+}
+
+/* change icon when the menu is opened */
+.menu-btn.active span:nth-of-type(1) {
+    display: none;
+    color: black;
+}
+
+.menu-btn.active span:nth-of-type(2) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(45deg);  
+    color: black;
+}
+
+.menu-btn.active span:nth-of-type(3) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(-45deg); 
+}
+
+/* menu appearing */
+.menu {
+	position: fixed;
+    z-index: 98;
+	top: 0;
+	left: 0;
+	width: 250px;
+	height: 100%;
+	padding: 15px;
+    background: rgb(215, 215, 215);
+	transform: translateX(-100%);
+	transition: transform 0.5s; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu.active {
+	transform: translateX(0);
+}
+
+.menu li {
+	list-style-type: none;
+}
+
+/* other elements */
+.menu>.logo {
+    width: 100px;
+    margin-top: 50px;
+}
+
+.menu>nav {
+    color: var(--main-black);
+}
+
+.menu>nav>ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.menu>nav a {
+    text-decoration: none;
+    color: var(--main-black);
+}
+
+.about-us>.footer>.footer-nav>.menu {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+/* red btn */
+
+.call-btn {
+    color: white;
+    background-color: var(--main-red);
+    left: 5px;
+    bottom: 160px;
+    width: 140px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+}
+
+/* COMMON STYLES */
+
+.background {
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    padding: 20px;
+    position: relative;
+}
+
+.background>.background-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgb(255, 255, 255, 0.1);
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.info-text {
+    color: white;
+    font-size: 50px;
+    font-weight: 700;
+    margin-left: 50px;
+    margin-top: 80px;
+}
+
+.header-text {
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+/* link */
+
+.link {
+    color: var(--main-black);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.link>.pointer {
+    width: 20px;
+}
+
+.top-left {
+    color: var(--main-red);
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+/* scroll arrow in the bottom of the page */
+
+.scroll-down {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: bisque;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.scroll-down>img {
+    width: 30px;
+}
+
+/* info cards */
+
+.cards-wrapper {
+    display: grid;
+    height: calc(100% - 70px);
+    margin-left: 50px;
+}
+
+.cards-wrapper>.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cards-wrapper>.card>.card-header {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+/* FIRST PAGE */
+ 
+.header {
+    background-image: url("./img/bgMain.jpg"); 
+}
+
+.header>.nav>a {
+    cursor: pointer;
+}
+
+/* white top block */
+
+.header>.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 255, 255, 0.7);
+    padding: 10px;
+    margin-left: 50px;
+    border-radius: 5px;
+}
+
+/* block inside white top */
+
+.header>.top>.middle {
+    color: var(--main-black);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header>.top>.middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+
+.header>.top>.middle>.logo-text {
+    font-size: 25px;
+}
+
+.header>.top>.phone-section {
+    font-weight: 700;
+    color: var(--main-black);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.header>.top>.phone-section>a {
+    color: var(--main-black);
+}
+
+/* white info text */
+
+.header>.info-text>.repairing {
+    font-size: 60px;
+}
+
+/* bottom of the header */
+
+.header>.cover-page-end {
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* SECOND PAGE - HOW WE WORK */
+
+.how-we-work {
+    background-image: url("./img/bgHowWeWork.jpg"); 
+}
+
+.how-we-work>.cards-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 40px;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.how-we-work>.cards-wrapper>.card {
+    height: 50%;
+    border: 5px solid var(--main-red);
+    color: white;
+    background-color: rgb(199, 184, 166);
+    padding: 10px;
+}
+
+/* THIRD PAGE - WHY WE */
+
+.why-we {
+    background-image: url("/img/bgWhyWe.jpg");
+}
+
+.header-why-we {
+    color: var(--main-black);
+}
+
+.why-we>.cards-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    font-size: 25px;
+    color: var(--main-black);
+}
+
+/* FOURTH PAGE - OUR WORKS */
+
+.our-work {
+    background-image: url("/img/bgOurWorks.jpg");
+}
+
+.our-work>.work-navigation {
+    position: absolute;
+    right: 50px;
+    top: 60px;
+}
+
+.our-work>.work-navigation>span {
+    background-color: var(--main-light-gray);
+    border: 1px solid var(--main-yellow);
+    border-radius: 30px;
+    cursor: pointer;
+    padding: 10px 15px;
+    margin-right: 20px;
+}
+
+/* unimart logo and discount info */
+.our-work>.page-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+    width: 100%;
+}
+
+.our-work>.page-bottom>.discount {
+    background-color: var(--main-light-gray);
+    font-size: 30px;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.our-work>.page-bottom>.unimart-logo {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    background-color: var(--main-light-gray);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.our-work>.page-bottom>.unimart-logo>.partners {
+    color: white;
+    font-size: 24px;
+}
+
+.our-work>.page-bottom>.unimart-logo>a>img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* FIFTH PAGE - PRICE */
+
+.price {
+    background-image: url("/img/bgPrice.jpg");
+}
+
+.price>.cards-wrapper .table-header {
+    font-weight: 700;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.price>.cards-wrapper table {
+    border: 3px solid var(--main-black);
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.price>.cards-wrapper table th {
+    background-color: var(--main-yellow);
+    padding: 15px 20px;
+    border: 1px solid var(--main-black);
+}
+
+.price>.cards-wrapper table td {
+    padding: 15px 20px;
+    text-align: center;
+}
+
+.price>.cards-wrapper table tr:nth-child(odd) {
+    background-color: rgb(211, 211, 211);
+    border-top: 1px solid gray;
+}
+
+.price>.cards-wrapper table tr:nth-child(even) {
+    background-color: rgb(255, 255, 255);
+}
+
+.price>.cards-wrapper .border-cell-right {
+    border-right: 1px solid var(--main-black);
+    border-left: 1px solid var(--main-black);
+}
+
+.price>.cards-wrapper .border-cell-left {
+    border-left: 1px solid var(--main-black);
+}
+
+.price .table-position {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* measurements block */
+
+.price .measurements {
+    flex-basis: 450px;
+    background-color: rgb(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 20px;
+    margin-top: 36px;
+    height: fit-content;
+}
+
+.price .measurements>.measurements-header {
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.price .measurements>.measurements-subheader {
+    font-weight: 600;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.price .measurements>.input-btn-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.price .measurements>.input-btn-wrapper>.order-btn {
+    background-color: var(--main-yellow);
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+}
+
+.price .measurements>.input-btn-wrapper>.number-input {
+    border-radius: 5px;
+    padding: 0 10px;
+    flex-basis: 50%;
+    font-size: 18px;
+    outline: none;
+}
+
+.price .measurements>.input-btn-wrapper>.number-input:focus {
+    border: 2px solid var(--main-yellow);
+}
+
+/* SIXTH PAGE - ABOUT US */
+
+.about-us {
+    background-image: url("./img/bgAboutUs.jpg");
+}
+
+.about-us>.text-about-us {
+    color: white;
+    font-size: 20px;
+    line-height: 26px;
+    width: 70%;
+    text-align: justify;
+    margin-left: 50px;
+}
+
+.about-us>.text-about-us.margin-text {
+    margin: 20px 0;
+    margin-left: 50px;
+}
+
+.about-us>.text-about-us.margin-top-text {
+    margin-top: 20px;
+}
+
+.about-us>.footer {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.about-us>.footer>.company-info {
+    display: flex;
+    gap: 20px;
+}
+
+.about-us>.footer>.company-info>.footer-logo {
+    height: 80px;
+}
+
+.about-us>.footer>.company-info .company-info-text {
+    font-size: 16px;
+    text-align: center;
+}
+
+.about-us>.footer>.company-info .company-info-text>.logo-text {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.about-us>.footer>.company-info .top-left {
+    margin-top: 30px;
+}
+
+.about-us>.footer>.footer-nav {
+    color: var(--main-black);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.about-us>.footer>.footer-nav>a {
+    text-decoration: none;
+    color: var(--main-black);
+}
+
+.about-us>.footer>.footer-nav>.menu {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.about-us>.footer>.send-project-btn-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.about-us>.footer>.send-project-btn-block>.send-btn {
+    background-color: var(--main-black);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.about-us>.footer>.contact-info {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.about-us>.footer>.contact-info>.contacts {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.about-us>.footer>.contact-info>.messenger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.about-us>.footer>.contact-info>.messenger .btn {
+    width: 180px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    font-size: 13px;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.about-us>.footer>.contact-info>.messenger .wa-btn {
+    background: linear-gradient(45deg, rgb(2, 133, 0), rgb(122, 253, 82));
+    justify-content: center;
+}
+
+.about-us>.footer>.contact-info>.messenger .tg-btn {
+    justify-content: space-between;
+    background-color: #229ED9;
+}
+
+.about-us>.footer>.contact-info>.messenger .tg-btn>.icon {
+    width: 30px;
+}
