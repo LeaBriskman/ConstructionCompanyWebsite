@@ -526,6 +526,7 @@
     background-color: white;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 20px;
     position: absolute;
     bottom: 0;
@@ -554,24 +555,6 @@
 
 .about-us>.footer>.company-info .top-left {
     margin-top: 30px;
-}
-
-.about-us>.footer>.footer-nav {
-    color: var(--main-black);
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.about-us>.footer>.footer-nav>a {
-    text-decoration: none;
-    color: var(--main-black);
-}
-
-.about-us>.footer>.footer-nav>.menu {
-    margin-bottom: 10px;
-    font-weight: 700;
-    font-size: 20px;
 }
 
 .about-us>.footer>.send-project-btn-block {
