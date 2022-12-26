@@ -1,0 +1,215 @@
+/* info cards */
+
+.cards-wrapper {
+    display: grid;
+    height: calc(100% - 70px);
+    margin-left: 50px;
+}
+
+.cards-wrapper>.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.cards-wrapper>.card>.card-header {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+/* SECOND PAGE - HOW WE WORK */
+
+.how-we-work {
+    background-image: url("../img/bgHowWeWork.jpg"); 
+}
+
+.how-we-work>.cards-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 40px;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.how-we-work>.cards-wrapper>.card {
+    height: 50%;
+    border: 5px solid var(--main-red);
+    color: white;
+    background-color: rgb(199, 184, 166);
+    padding: 10px;
+}
+
+/* THIRD PAGE - WHY WE */
+
+.why-we {
+    background-image: url("../img/bgWhyWe.jpg");
+}
+
+.header-why-we {
+    color: var(--main-black);
+}
+
+.why-we>.cards-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    font-size: 25px;
+    color: var(--main-black);
+}
+
+/* FOURTH PAGE - OUR WORKS */
+
+.our-work {
+    background-image: url("../img/bgOurWorks.jpg");
+}
+
+.our-work>.work-navigation {
+    position: absolute;
+    right: 50px;
+    top: 60px;
+}
+
+.our-work>.work-navigation>span {
+    background-color: var(--main-light-gray);
+    border: 1px solid var(--main-yellow);
+    border-radius: 30px;
+    cursor: pointer;
+    padding: 10px 15px;
+    margin-right: 20px;
+}
+
+/* unimart logo and discount info */
+.our-work>.page-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+    width: 100%;
+}
+
+.our-work>.page-bottom>.discount {
+    background-color: var(--main-light-gray);
+    font-size: 30px;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.our-work>.page-bottom>.unimart-logo {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    background-color: var(--main-light-gray);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.our-work>.page-bottom>.unimart-logo>.partners {
+    color: white;
+    font-size: 24px;
+}
+
+.our-work>.page-bottom>.unimart-logo>a>img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .scroll-down {
+        display: none;
+    }
+
+    /* info cards */
+
+    .cards-wrapper {
+        height: fit-content;
+        margin-left: 0;
+        margin-top: 20px;
+    }  
+
+    .cards-wrapper>.card {
+        text-align: center;
+    }
+
+    /* SECOND PAGE */
+
+    .how-we-work {
+        background: none; 
+    }
+
+    .how-we-work>.cards-wrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        font-size: 18px;
+        gap: 10px;
+    }
+
+    .how-we-work>.cards-wrapper>.card {
+        height: 100%;
+        color: var(--main-black);
+    }
+
+    /* THIRD PAGE */
+
+    .why-we {
+        background: none;
+    }
+
+    .why-we>.cards-wrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        font-size: 25px;
+        gap: 15px;
+    }
+
+    .why-we>.cards-wrapper>.card {
+        box-shadow: 0px 2px 18px 0px rgb(0 0 0 / 30%);
+        padding: 10px;
+    }
+
+    /* FOURTH PAGE */
+
+    .our-work {
+        background: none;
+    }
+
+    .our-work>.work-navigation {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        top: 0;
+        left: 0;
+        margin-top: 20px;
+        gap: 10px;
+    }
+
+    .our-work>.work-navigation>span {
+        padding: 20px;
+        margin: 0;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    /* unimart logo and discount info */
+    .our-work>.page-bottom {
+        position: relative;
+        bottom: 0;
+        flex-direction: column;
+        margin-top: 30px;
+        gap: 10px;
+    }
+
+    .our-work>.page-bottom>.discount {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .our-work>.page-bottom>.unimart-logo>.partners {
+        text-align: center;
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,364 @@
+/* FIFTH PAGE - PRICE */
+
+.price {
+    background-image: url("../img/bgPrice.jpg");
+}
+
+.price>.cards-wrapper .table-header {
+    font-weight: 700;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.price>.cards-wrapper table {
+    border: 3px solid var(--main-black);
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.price>.cards-wrapper table th {
+    background-color: var(--main-yellow);
+    padding: 15px 20px;
+    border: 1px solid var(--main-black);
+}
+
+.price>.cards-wrapper table td {
+    padding: 15px 20px;
+    text-align: center;
+}
+
+.price>.cards-wrapper table tr:nth-child(odd) {
+    background-color: rgb(211, 211, 211);
+    border-top: 1px solid gray;
+}
+
+.price>.cards-wrapper table tr:nth-child(even) {
+    background-color: rgb(255, 255, 255);
+}
+
+.price>.cards-wrapper .border-cell-right {
+    border-right: 1px solid var(--main-black);
+    border-left: 1px solid var(--main-black);
+}
+
+.price>.cards-wrapper .border-cell-left {
+    border-left: 1px solid var(--main-black);
+}
+
+.price .table-position {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* measurements block */
+
+.price .measurements {
+    flex-basis: 450px;
+    background-color: rgb(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 20px;
+    margin-top: 36px;
+    height: fit-content;
+}
+
+.price .measurements>.measurements-header {
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.price .measurements>.measurements-subheader {
+    font-weight: 600;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.price .measurements>.input-btn-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.price .measurements>.input-btn-wrapper>.order-btn {
+    background-color: var(--main-yellow);
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+}
+
+.price .measurements>.input-btn-wrapper>.number-input {
+    border-radius: 5px;
+    padding: 0 10px;
+    flex-basis: 50%;
+    font-size: 18px;
+    outline: none;
+}
+
+.price .measurements>.input-btn-wrapper>.number-input:focus {
+    border: 2px solid var(--main-yellow);
+}
+
+.price .measurements-mobile {
+    display: none;
+}
+
+/* SIXTH PAGE - ABOUT US */
+
+.about-us {
+    background-image: url("../img/bgAboutUs.jpg");
+}
+
+.about-us>.text-about-us {
+    color: white;
+    font-size: 20px;
+    line-height: 26px;
+    width: 70%;
+    text-align: justify;
+    margin-left: 50px;
+}
+
+.about-us>.text-about-us.margin-text {
+    margin: 20px 0;
+    margin-left: 50px;
+}
+
+.about-us>.text-about-us.margin-top-text {
+    margin-top: 20px;
+}
+
+/* FOOTER */
+
+.top-left-mobile {
+    display: none;
+}
+
+.about-us>.footer {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.about-us>.footer>.company-info {
+    display: flex;
+    gap: 20px;
+}
+
+.about-us>.footer>.company-info>.footer-logo {
+    height: 80px;
+}
+
+.about-us>.footer>.company-info .company-info-text {
+    font-size: 16px;
+    text-align: center;
+}
+
+.about-us>.footer>.company-info .company-info-text>.logo-text {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.about-us>.footer>.company-info .top-left {
+    margin-top: 30px;
+}
+
+.about-us>.footer>.send-project-btn-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.about-us>.footer>.send-project-btn-block>.send-btn {
+    background-color: var(--main-black);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.about-us>.footer>.contact-info {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.about-us>.footer>.contact-info>.contacts {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.about-us>.footer>.contact-info>.messenger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.about-us>.footer>.contact-info>.messenger .btn {
+    width: 180px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    font-size: 13px;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+.about-us>.footer>.contact-info>.messenger .wa-btn {
+    background: linear-gradient(45deg, rgb(2, 133, 0), rgb(122, 253, 82));
+    justify-content: center;
+}
+
+.about-us>.footer>.contact-info>.messenger .tg-btn {
+    justify-content: space-between;
+    background-color: #229ED9;
+}
+
+.about-us>.footer>.contact-info>.messenger .tg-btn>.icon {
+    width: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    /* FIFTH PAGE - PRICE */
+
+    .price {
+        background: none;
+    }
+
+    .price>.cards-wrapper {
+        overflow-x: auto;
+        gap: 15px;
+    }
+
+    .price>.cards-wrapper .table-header {
+        font-size: 18px;
+    }
+
+    .price>.cards-wrapper table th, .price>.cards-wrapper table td {
+        padding: 10px 15px;
+    }
+
+    /* measurements block */
+
+    .price .measurements {
+        display: none;
+    }
+
+    .price .measurements-mobile {
+        display: block;
+        background-color: rgb(255, 255, 255, 0.7);
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 36px;
+        box-shadow: 0px 2px 18px 0px rgb(0 0 0 / 30%);
+    }
+
+    .price .measurements-mobile>.measurements-header {
+        font-size: 25px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .price .measurements-mobile>.measurements-subheader {
+        font-weight: 600;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .price .measurements-mobile>.input-btn-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .price .measurements-mobile>.input-btn-wrapper>.order-btn {
+        background-color: var(--main-yellow);
+        padding: 10px 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+        cursor: pointer;
+    }
+
+    .price .measurements-mobile>.input-btn-wrapper>.number-input {
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 18px;
+        outline: none;
+    }
+
+    .price .measurements-mobile>.input-btn-wrapper>.number-input:focus {
+        border: 2px solid var(--main-yellow);
+    }
+
+    /* SIXTH PAGE */
+
+    .about-us {
+        background: none;
+    }
+
+    .about-us>.text-about-us {
+        color: var(--main-black);
+        width: 100%;
+        margin-left: 0;
+        font-size: 16px;
+    }
+
+    .about-us>.text-about-us.margin-text {
+        margin-left: 0;
+    }
+
+    .about-us>.footer {
+        flex-direction: column;
+        border-top: 1px solid gray;
+        gap: 30px;
+        position: relative;
+        margin-top: 20px;
+    }
+
+    .about-us>.footer>.company-info {
+        align-items: center;
+    }
+
+    .about-us>.footer>.company-info .top-left {
+        display: none;
+    }
+
+    .about-us>.footer>.top-left-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-us>.footer>.send-project-btn-block {
+        gap: 5px;
+    }
+
+    .about-us>.footer>.contact-info {
+        text-align: center;
+    }
+
+    .about-us>.footer>.contact-info>.messenger {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .about-us>.footer>.contact-info>.messenger .btn {
+        height: 50px;
+    }
+}

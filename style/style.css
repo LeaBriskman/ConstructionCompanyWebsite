@@ -1,0 +1,332 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+    z-index: 0;
+
+    --main-black: #121212;
+    --main-red: #670000;
+    --main-light-gray: rgb(154, 152, 152);
+    --main-yellow: rgb(255, 255, 90);
+}
+
+/* MENU */
+/* icon */
+
+.menu-btn {
+	width: 40px;
+	height: 30px;
+	position: fixed;
+	z-index: 99;
+	overflow: hidden;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+}
+
+.menu-btn span {
+	width: 40px;
+	height: 2px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #ffffff;
+	transition: all 0.5s;
+}
+
+.menu-btn span:nth-of-type(2) {
+	top: calc(50% - 5px);
+}
+
+.menu-btn span:nth-of-type(3) {
+	top: calc(50% + 5px);
+}
+
+/* change icon when the menu is opened */
+.menu-btn.active span:nth-of-type(1) {
+    display: none;
+    color: black;
+}
+
+.menu-btn.active span:nth-of-type(2) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(45deg);  
+    color: black;
+}
+
+.menu-btn.active span:nth-of-type(3) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(-45deg); 
+}
+
+/* menu appearing */
+.menu {
+	position: fixed;
+    z-index: 98;
+	top: 0;
+	left: 0;
+	width: 250px;
+	height: 100%;
+	padding: 15px;
+    background: rgb(215, 215, 215);
+	transform: translateX(-100%);
+	transition: transform 0.5s; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu.active {
+	transform: translateX(0);
+}
+
+.menu li {
+	list-style-type: none;
+}
+
+/* other elements */
+.menu>.logo {
+    width: 100px;
+    margin-top: 50px;
+}
+
+.menu>nav {
+    color: var(--main-black);
+}
+
+.menu>nav>ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.menu>nav a {
+    text-decoration: none;
+    color: var(--main-black);
+}
+
+.about-us>.footer>.footer-nav>.menu {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+/* red btn */
+
+.call-btn {
+    color: white;
+    background-color: var(--main-red);
+    left: 5px;
+    bottom: 160px;
+    width: 140px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+}
+
+/* COMMON STYLES */
+
+.background {
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    padding: 20px;
+    position: relative;
+}
+
+.background>.background-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgb(255, 255, 255, 0.1);
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.info-text {
+    color: white;
+    font-size: 50px;
+    font-weight: 700;
+    margin-left: 50px;
+    margin-top: 80px;
+}
+
+.header-text {
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+/* link */
+
+.link {
+    color: var(--main-black);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.link>.pointer {
+    width: 20px;
+}
+
+.top-left {
+    color: var(--main-red);
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+/* scroll arrow in the bottom of the page */
+
+.scroll-down {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: bisque;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.scroll-down>img {
+    width: 30px;
+}
+
+/* FIRST PAGE */
+ 
+.header {
+    background-image: url("../img/bgMain.jpg"); 
+}
+
+.header>.nav>a {
+    cursor: pointer;
+}
+
+/* white top block */
+
+.header>.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 255, 255, 0.7);
+    padding: 10px;
+    margin-left: 50px;
+    border-radius: 5px;
+}
+
+/* block inside white top */
+
+.header>.top>.middle {
+    color: var(--main-black);
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+
+.header>.top>.middle>.logo-text {
+    font-size: 25px;
+    text-align: center;
+}
+
+.header>.top>.phone-section {
+    font-weight: 700;
+    color: var(--main-black);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.header>.top>.phone-section>a {
+    color: var(--main-black);
+}
+
+/* white info text */
+
+.header>.info-text>.repairing {
+    font-size: 60px;
+}
+
+/* bottom of the header */
+
+.header>.cover-page-end {
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-btn span {
+        background-color: var(--main-black);
+    }
+
+    .menu {
+        width: 100%;
+    }
+    
+    .background {
+        height: fit-content;
+    }
+
+    .background>.background-overlay {
+        background-color: rgb(255, 255, 255, 0.3);
+        left: 0;
+        top: 0;
+        z-index: -1;
+    }
+
+    /* FIRST PAGE */
+    .top-left {
+        align-items: center;
+    }
+
+    .background.header {
+        height: 100vh;
+    }
+
+    .header>.top{
+        flex-direction: column; 
+        background: none;
+        gap: 30px; 
+        margin: 40px 0 0; 
+        font-size: 18px;  
+    }
+
+    .header>.top>.middle>.logo-text {
+        font-size: 22px;
+    }
+
+    .info-text {
+        color: var(--main-black);
+        font-size: 30px;
+        margin: 10px 0 0;
+        text-align: center;
+    }
+    
+    .header>.info-text>.repairing {
+        font-size: 50px;
+        margin: 20px 0 0;
+    }
+
+    .header>.cover-page-end {
+        display: none;
+    }
+}
+

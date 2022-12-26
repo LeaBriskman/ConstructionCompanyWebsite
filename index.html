@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./style.css" rel="stylesheet" type="text/css">
+    <link href="./style/style.css" rel="stylesheet" type="text/css">
+    <link href="./style/styleContinue.css" rel="stylesheet" type="text/css">
+    <link href="./style/styleLast.css" rel="stylesheet" type="text/css">
     <title>Дом Ремонт Строй</title>
 </head>
 <body>
@@ -19,19 +21,19 @@
 
         <nav>
             <ul>
-                <li><a href="#main">ГЛАВНАЯ</a></li>
-                <li><a href="#how-we-work">КАК МЫ РАБОТАЕМ</a></li>
-                <li><a href="#why-we">ПОЧЕМУ МЫ</a></li>
-                <li><a href="#our-work">НАШИ РАБОТЫ</a></li>
-                <li><a href="#price">ЦЕНЫ</a></li>
-                <li><a href="#about-us">О НАС</a></li>
+                <li class="menu-item"><a href="#main">ГЛАВНАЯ</a></li>
+                <li class="menu-item"><a href="#how-we-work">КАК МЫ РАБОТАЕМ</a></li>
+                <li class="menu-item"><a href="#why-we">ПОЧЕМУ МЫ</a></li>
+                <li class="menu-item"><a href="#our-work">НАШИ РАБОТЫ</a></li>
+                <li class="menu-item"><a href="#price">ЦЕНЫ</a></li>
+                <li class="menu-item"><a href="#about-us">О НАС</a></li>
             </ul>
         </nav>
 
         <div class="call-btn">Оставить заявку</div>
     </div>
 
-   <a name="main"></a>
+   <a name="main" id="main"></a>
    <section class="background header">
         <div class="background-overlay"></div>
 
@@ -70,7 +72,7 @@
         </div>
     </section>
 
-   <a name="how-we-work"></a>
+   <a name="how-we-work" id="how-we-work"></a>
    <section class="background how-we-work">
         <div class="background-overlay"></div>
 
@@ -115,7 +117,7 @@
         </a>
    </section>
 
-   <a name="why-we"></a>
+    <a name="why-we" id="why-we"></a>
    <section class="background why-we">
         <div class="background-overlay"></div>
 
@@ -150,7 +152,7 @@
         </a>
    </section>
 
-   <a name="our-work"></a>
+   <a name="our-work" id="our-work"></a>
    <section class="background our-work">
         <div class="background-overlay"></div>
 
@@ -182,7 +184,7 @@
         </a>
    </section>
 
-   <a name="price"></a>
+   <a name="price" id="price"></a>
    <section class="background price">
         <div class="background-overlay"></div>
     
@@ -265,6 +267,15 @@
             </div>
         </div>
 
+        <div class="measurements-mobile">
+            <div class="measurements-header">Закажите бесплатный выезд замерщика</div>
+            <div class="measurements-subheader">Оставьте номер телефона, и наш менеджер позвонит для уточнения времени замера и расчета сметы</div>                                
+            <div class="input-btn-wrapper">
+                <input class="number-input" placeholder="+7 900 000 00 00" />
+                <div class="order-btn">ЗАКАЗАТЬ ЗАМЕР</div>
+            </div>
+        </div>
+
         <a href="#about-us">
             <div class="scroll-down">
                 <img src="./img/down-arrow.svg" />
@@ -272,7 +283,7 @@
         </a>
    </section>
 
-   <a name="about-us"></a>
+   <a name="about-us" id="about-us"></a>
    <section class="background about-us">
         <div class="info-text header-text">О НАС</div>
 
@@ -299,6 +310,15 @@
                         <div>Делаем ремонты!</div>
                     </div>
                 </div>
+            </div>
+
+            <div class="top-left-mobile">
+                <a class="link" href="https:/fundament-dom-stroy.ru" target="_blank">
+                    fundament-dom-stroy.ru
+                    <img class="pointer" src="./img/finger.png" alt="finger" />
+                </a>
+                <div>Строим дома!</div>
+                <div>Делаем ремонты!</div>
             </div>
 
             <div class="send-project-btn-block"> 
