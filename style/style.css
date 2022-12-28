@@ -9,6 +9,11 @@
     --main-red: #670000;
     --main-light-gray: rgb(154, 152, 152);
     --main-yellow: rgb(255, 255, 90);
+    --main-beige: #fffaf0;
+}
+
+body {
+    background-color: var(--main-beige);
 }
 
 /* MENU */
@@ -107,6 +112,10 @@
 .menu>nav a {
     text-decoration: none;
     color: var(--main-black);
+}
+
+.menu>nav a:hover {
+    color: var(--main-red);
 }
 
 .about-us>.footer>.footer-nav>.menu {

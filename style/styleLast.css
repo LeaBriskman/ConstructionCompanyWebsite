@@ -216,6 +216,7 @@
     display: flex;
     align-items: center;
     height: 50px;
+    text-decoration: none;
 }
 
 .about-us>.footer>.contact-info>.messenger .wa-btn {
