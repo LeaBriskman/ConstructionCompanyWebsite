@@ -25,3 +25,23 @@ for (let smoothLink of smoothLinks) {
         });
     });
 };
+
+document.addEventListener('DOMContentLoaded', () => {
+    const splide = new Splide('.splide', {
+        type: 'slide',
+        focus: 'center',
+        perPage: 1,
+        perMove: 1,
+        gap: 30,
+        arrows: true,
+        pagination: false,
+        updateOnMove: true,
+        breakpoints: {
+            1024: {
+                perPage: 1,
+                type: 'slide',
+            },
+        }
+    });
+    splide.mount();
+});
