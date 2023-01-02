@@ -7,8 +7,9 @@
     <link href="./style/style.css" rel="stylesheet" type="text/css">
     <link href="./style/styleContinue.css" rel="stylesheet" type="text/css">
     <link href="./style/styleLast.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="./js/splide-4.1.3/dist/css/splide.min.css">
+    <link href="./style/modals.css" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" href="./img/homeIcon.png" type="image/x-icon">
+    <link type="text/css" rel="stylesheet" href="./js/lightgallery.js-master/dist/css/lightgallery.css" />
     <title>Дом Ремонт Строй</title>
 </head>
 <body>
@@ -32,7 +33,7 @@
             </ul>
         </nav>
 
-        <div class="call-btn">Оставить заявку</div>
+        <div class="call-btn" id="requestBtn">Оставить заявку</div>
     </div>
 
    <a name="main" id="main"></a>
@@ -161,10 +162,10 @@
         <div class="info-text header-text">НАШИ РАБОТЫ</div>
 
         <div class="work-navigation">
-            <span>Квартиры</span>
-            <span>Дома и коттеджи</span>
-            <span>Офисы</span>
-            <span>Производственные помещения</span>
+            <span id="flats">Квартиры</span>
+            <span id="houses">Дома и коттеджи</span>
+            <span id="offices">Офисы</span>
+            <span id="industrials">Производственные помещения</span>
         </div>
 
         <div class="page-bottom">
@@ -262,8 +263,10 @@
                     <div class="measurements-header">Закажите бесплатный выезд замерщика</div>
                     <div class="measurements-subheader">Оставьте номер телефона, и наш менеджер позвонит для уточнения времени замера и расчета сметы</div>                                
                     <div class="input-btn-wrapper">
-                        <input class="number-input" placeholder="+7 900 000 00 00" />
-                        <div class="order-btn">ЗАКАЗАТЬ ЗАМЕР</div>
+                        <form method="post" action="measure.php">
+                            <input class="number-input" placeholder="+7 900 000 00 00" name="number" required />
+                            <input class="order-btn" type="submit" value="ЗАКАЗАТЬ ЗАМЕР"/>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -273,8 +276,10 @@
             <div class="measurements-header">Закажите бесплатный выезд замерщика</div>
             <div class="measurements-subheader">Оставьте номер телефона, и наш менеджер позвонит для уточнения времени замера и расчета сметы</div>                                
             <div class="input-btn-wrapper">
-                <input class="number-input" placeholder="+7 900 000 00 00" />
-                <div class="order-btn">ЗАКАЗАТЬ ЗАМЕР</div>
+                <form method="post" action="measure.php">
+                    <input class="number-input" placeholder="+7 900 000 00 00" name="number" required />
+                    <input class="order-btn" type="submit" value="ЗАКАЗАТЬ ЗАМЕР"/>
+                </form>
             </div>
         </div>
 
@@ -324,7 +329,7 @@
             </div>
 
             <div class="send-project-btn-block"> 
-                <div class="send-btn">ОТПРАВИТЬ</div>
+                <div class="send-btn" id="sendProject">ОТПРАВИТЬ</div>
                 Проект на расчет
             </div>
 
@@ -353,8 +358,310 @@
         </footer>
    </section>
 
-   <script src="./js/splide-4.1.3/dist/js/splide.min.js"></script>
-   <script src="./js/script.js"></script>
+   <!-- modals -->
+   <div id="flatsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="flatsClose">&times;</span>
+
+            <div class="photo-wrapper" id="lightgalleryFlats">
+                <a class="img-box" href="./img/flats/1.jpg">
+                    <img src="./img/flats/1.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/flats/2.jpg">
+                    <img src="./img/flats/2.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/flats/3.jpg">
+                    <img src="./img/flats/3.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/flats/4.jpg">
+                    <img src="./img/flats/4.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/flats/5.jpg">
+                    <img src="./img/flats/5.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/flats/6.jpg">
+                    <img src="./img/flats/6.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/flats/7.jpg">
+                    <img src="./img/flats/7.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/flats/8.jpg">
+                    <img src="./img/flats/8.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/flats/9.jpg">
+                    <img src="./img/flats/9.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/flats/10.jpg">
+                    <img src="./img/flats/10.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/flats/11.jpg">
+                    <img src="./img/flats/11.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/flats/12.jpg">
+                    <img src="./img/flats/12.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/flats/13.jpg">
+                    <img src="./img/flats/13.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/flats/14.jpg">
+                    <img src="./img/flats/14.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/flats/15.jpg">
+                    <img src="./img/flats/15.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/flats/16.jpg">
+                    <img src="./img/flats/16.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/flats/17.jpg">
+                    <img src="./img/flats/17.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/flats/18.jpg">
+                    <img src="./img/flats/18.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/flats/19.jpg">
+                    <img src="./img/flats/19.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+            </div>
+        </div> 
+    </div>
+
+    <div id="housesModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="housesClose">&times;</span>
+            
+            <div class="photo-wrapper" id="lightgalleryHouses">
+                <a class="img-box" href="./img/houses/1.jpg">
+                    <img src="./img/houses/1.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/houses/2.jpg">
+                    <img src="./img/houses/2.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/houses/3.jpg">
+                    <img src="./img/houses/3.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/houses/4.jpg">
+                    <img src="./img/houses/4.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/houses/5.jpg">
+                    <img src="./img/houses/5.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/houses/6.jpg">
+                    <img src="./img/houses/6.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/houses/7.jpg">
+                    <img src="./img/houses/7.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/houses/8.jpg">
+                    <img src="./img/houses/8.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/houses/9.jpg">
+                    <img src="./img/houses/9.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/houses/10.jpg">
+                    <img src="./img/houses/10.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/houses/11.jpg">
+                    <img src="./img/houses/11.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/houses/12.jpg">
+                    <img src="./img/houses/12.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/houses/13.jpg">
+                    <img src="./img/houses/13.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/houses/14.jpg">
+                    <img src="./img/houses/14.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/houses/15.jpg">
+                    <img src="./img/houses/15.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+            </div>
+        </div> 
+    </div>
+
+    <div id="officesModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="officesClose">&times;</span>
+
+            <div class="photo-wrapper" id="lightgalleryOffices">
+                <a class="img-box" href="./img/offices/1.jpg">
+                    <img src="./img/offices/1.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/offices/2.jpg">
+                    <img src="./img/offices/2.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/offices/3.jpg">
+                    <img src="./img/offices/3.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/offices/4.jpg">
+                    <img src="./img/offices/4.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/offices/5.jpg">
+                    <img src="./img/offices/5.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/offices/6.jpg">
+                    <img src="./img/offices/6.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/offices/7.jpg">
+                    <img src="./img/offices/7.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/offices/8.jpg">
+                    <img src="./img/offices/8.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/offices/9.jpg">
+                    <img src="./img/offices/9.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/offices/10.jpg">
+                    <img src="./img/offices/10.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/offices/11.jpg">
+                    <img src="./img/offices/11.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/offices/12.jpg">
+                    <img src="./img/offices/12.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/offices/13.jpg">
+                    <img src="./img/offices/13.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/offices/14.jpg">
+                    <img src="./img/offices/14.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/offices/15.jpg">
+                    <img src="./img/offices/15.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/offices/16.jpg">
+                    <img src="./img/offices/16.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/offices/17.jpg">
+                    <img src="./img/offices/17.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/offices/18.jpg">
+                    <img src="./img/offices/18.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/offices/19.jpg">
+                    <img src="./img/offices/19.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+            </div>
+        </div> 
+    </div>
+
+    <div id="industrialsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="industrialsClose">&times;</span>
+            
+            <div class="photo-wrapper" id="lightgalleryIndustrials">
+                <a class="img-box" href="./img/industrial/1.jpg">
+                    <img src="./img/industrial/1.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/industrial/2.jpg">
+                    <img src="./img/industrial/2.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/industrial/3.jpg">
+                    <img src="./img/industrial/3.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/industrial/4.jpg">
+                    <img src="./img/industrial/4.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/industrial/5.jpg">
+                    <img src="./img/industrial/5.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/industrial/6.jpg">
+                    <img src="./img/industrial/6.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+                <a class="img-box" href="./img/industrial/7.jpg">
+                    <img src="./img/industrial/7.jpg"/> 
+                    <div class="overlay"><img src="./img/magnifying.png"/></div>
+                </a>
+            </div>
+        </div> 
+    </div>
+
+    <div id="requestModal" class="modal">
+        <div class="modal-content request">
+            <span class="close" id="requestClose">&times;</span>
+
+            <form method="post" action="request.php" class="request-form">
+                <input class="form-input" placeholder="Ваше имя" name="name" required />
+                <input class="form-input" placeholder="+7 900 000 00 00" name="number" required />
+                <input class="call-btn" type="submit" value="ОСТАВИТЬ ЗАЯВКУ" />
+            </form>
+        </div>
+    </div>
+
+    <div id="projectModal" class="modal">
+        <div class="modal-content request">
+            <span class="close" id="projectClose">&times;</span>
+
+            <form method="post" action="project.php" class="request-form">
+                <input class="form-input" placeholder="Ваше имя" name="name" required />
+                <input class="form-input" placeholder="+7 900 000 00 00" name="number" required />
+                <input type="file" name="project" class="files" required />
+                <input class="call-btn" type="submit" value="ОСТАВИТЬ ЗАЯВКУ" />
+            </form>
+        </div>
+    </div>
+
+    <script src="./js/lightgallery.js-master/dist/js/lightgallery.min.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
 
