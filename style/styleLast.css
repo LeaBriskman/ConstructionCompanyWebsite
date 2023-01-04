@@ -198,6 +198,10 @@
     font-size: 20px;
 }
 
+.about-us>.footer>.contact-info a {
+    color: var(--main-black);
+}
+
 .about-us>.footer>.contact-info>.messenger {
     display: flex;
     align-items: center;
